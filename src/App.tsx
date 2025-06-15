@@ -1,18 +1,18 @@
-import { useState } from "react"
-import { SearchForm } from "./components"
+import { useState } from "react";
+import { SearchForm, GifList } from "./components"
 
 function App() {
-  const [categories, setCategories] = useState(["NBA", "MLB"])
+  const [categories, setCategories] = useState<string[]>([]);
 
   const addCategory = (category: string) => {
     if (categories.includes(category)) return;
+    setCategories([category, ...categories]);
+  }
 
-    setCategories((prevCategories) => [category, ...prevCategories]);
-  };
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=5&q=${search}`
+
   return (
-    <>
-      <h1>Search a GIF</h1>
+    <section className="m-auto mt-10 container">
+      <h1 className="mb-10 font-extralight text-3xl uppercase tracking-widest">Search a GIF</h1>
 
       <SearchForm
         // onSearch={setCategories}
@@ -20,12 +20,10 @@ function App() {
         onNewCategory={(value: string) => addCategory(value)}
       />
 
-      <ol>
-        {categories.map((c) => (
-          <li key={c}>{c}</li>
-        ))}
-      </ol>
-    </>
+      {/* //* LISTADO DE CATEGORIAS */}
+      {categories.map((category) => (<GifList key={category} category={category} />))}
+
+    </section>
   )
 }
 
