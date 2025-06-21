@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Pruebas en <GifCard /> Debe hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="relative flex flex-col shadow-md border border-slate-300 w-full hover:scale-95 transition-all duration-300 ease-in-out cursor-pointer"
+    id="1"
+  >
+    <span />
+    <img
+      alt="Test gif"
+      class="w-full h-full min-h-[200px] object-cover"
+      src="https://test.com/gif.gif"
+    />
+    <h4
+      class="bg-white p-2 font-medium uppercase"
+    >
+      Test gif
+    </h4>
+  </div>
+</div>
+`;

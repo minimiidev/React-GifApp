@@ -19,7 +19,7 @@ export const SearchForm = ({ onNewCategory }: Props) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex mb-10 w-full">
+        <form aria-label="form" onSubmit={handleSubmit} className="flex mb-10 w-full">
             <input type="text" name="search" id="search" placeholder="Search for a GIF"
                 className="bg-white hover:bg-gray-100 focus:bg-gray-300 p-2 border-2 border-gray-400 border-r-0 border-r-transparent focus:border-blue-500 outline-0 w-full transition-all duration-300 ease-in-out"
                 value={inputValue}

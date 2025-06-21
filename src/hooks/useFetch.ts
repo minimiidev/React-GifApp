@@ -3,7 +3,8 @@ import type { GifData, GiphyRawGif } from '../interfaces';
 
 type ErrorType = Error | null;
 
-const API_KEY = import.meta.env.VITE_GIPHY_API_KEY
+// const API_KEY = import.meta.env.VITE_GIPHY_API_KEY
+const API_KEY = "V5gt8NTf0sqgTTokkvsccTwSK8heGFYN"
 
 export const useFetch = (category: string) => {
     const [images, setImages] = useState<GifData[]>([]);
