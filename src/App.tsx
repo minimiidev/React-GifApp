@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <section className="m-auto mt-10 container">
+    <section className="m-auto mt-10 px-4 container">
       <h1 className="mb-10 font-extralight text-3xl uppercase tracking-widest">Search a GIF</h1>
 
       <SearchForm
